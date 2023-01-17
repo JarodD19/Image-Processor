@@ -1,0 +1,41 @@
+load-image res/manhattan-small.png man
+ blur man manblur
+ blur manblur manblur
+ sharpen man mansharp
+ sharpen mansharp mansharp
+ sepia-tone man mansep
+ grey-scale man mangrey
+ save-image res/mangrey.png mangrey
+ save-image res/mansep.png mansep
+ save-image res/mansharp.png mansharp
+ save-image res/manblur.png manblur
+ load-image res/BMPSmaple.bmp bmp
+ vertical-flip bmp bmpflipped
+ horizontal-flip bmp horizflip
+ save-image res/horizflipbmp.bmp horizflip
+ save-image res/bmpflipped.bmp bmpflipped
+ load-image res/masterpiece.jpg mas
+ darken 20 bmp bmpdark
+ save-image res/bmpdark.bmp bmpdark
+ brighten 20 mas masbrig
+ red-component mas masred
+ green-component mas masgreen
+ save-image res/brightmas.png masbrig
+ save-image res/masgreen.ppm masgreen
+ save-image res/masred.bmp masred
+ load-image res/exmaple.ppm ex
+ blue-component ex exblue
+ luma-component ex exblue1
+ value-component ex exblue2
+ intensity-component ex exblue3
+ save-image res/exint.ppm exblue3
+ save-image res/exblue.png exblue
+ save-image res/exluma.jpg exblue1
+ save-image res/exval.bmp exblue2
+  load-image res/minio.png min
+  load-image res/miniomask.png minmask
+  luma-component min minmask minlumamask
+  luma-component min minluma
+  save-image res/minlumamask.png minlumamask
+  save-image res/minluma.png minluma
+ q
